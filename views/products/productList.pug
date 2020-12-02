@@ -1,0 +1,23 @@
+extends ../layout
+
+
+block content
+    .row
+        .col-md-6
+            h1 Food You Ordered!
+        .col-md-6
+            a(href="/products/add" class="btn btn-primary float-right") Add Item
+        table.table
+            thead
+                tr
+                    th Item Name
+                    th Item Price
+            tbody
+                each product in products
+                    tr 
+                        td=product.name
+                        td=product.price
+                        td  
+                            a(href="/products/delete/"+product._id    class="btn btn-danger") Delete
+                            a(href="/products/edit/"+product._id    class="btn btn-info") Edit
+                            a(href="/products/cart/"+product._id    class="btn btn-info ml-3") Add To Cart

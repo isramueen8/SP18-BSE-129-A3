@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: lightgoldenrodyellow;
+}
+
+a{
+  color: skyblue
+}
+
+h1{
+  color: blueviolet;
+}
+h2{
+  color: lightcoral;
+}

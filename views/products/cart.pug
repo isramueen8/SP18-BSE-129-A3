@@ -1,0 +1,21 @@
+extends ../layout
+
+block content 
+    h1 Food Added in Cart
+    - var total=0
+    table(class="table") 
+        thead 
+            tr  
+                th Item Name
+                th Item Price
+        each item in cart
+            - total += Number(item.price)
+            tbody
+                tr
+                    td=item.name        
+                    td=item.price
+                        a(href="cart/remove/"+item._id ,class="btn btn-danger") Remove
+        tfoot
+            tr
+                th Total        
+                th=total          
